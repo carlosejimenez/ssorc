@@ -1,5 +1,9 @@
-auxiliary_data/
-training_data/
+auxiliary_data/author_year_2_h_index.json
+auxiliary_data/mesh/
+auxiliary_data/mesh_embeddings.jsonl
+auxiliary_data/paper_id_2_citation_counts.json
+auxiliary_data/paper_id_2_citation_years.json
+auxiliary_data/paper_metadata_mag_mesh.json
 .idea/
 
 # Byte-compiled / optimized / DLL files
