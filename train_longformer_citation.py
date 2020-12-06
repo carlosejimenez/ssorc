@@ -128,9 +128,9 @@ for epoch in range(EPOCHS):
 # In[23]:
 
 
-model.save_pretrained('citation_model')
-print(f'saved to citation_model/')
-
+filename = f'citation_model/{datetime.now().isoformat().replace(".", "_").replace(":", "-")}'
+model.save_pretrained(filename)
+print(f'saved to {filename}')
 
 # In[24]:
 

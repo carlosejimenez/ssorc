@@ -80,12 +80,12 @@ torch.cuda.memory_allocated()
 # In[10]:
 
 
-EPOCHS = 8
-BATCH_SIZE = 4
+EPOCHS = 6
+BATCH_SIZE = 8
 LR = 1e-5
 DEVICE = torch.device('cuda')
 model = LongformerForSequenceClassification.from_pretrained('allenai/longformer-base-4096', gradient_checkpointing=True).to(DEVICE)
-
+print(f'EPOCHS: {EPOCHS}, BATCH_SIZE: {BATCH_SIZE}, LR: {LR}')
 
 # In[11]:
 
@@ -122,8 +122,9 @@ for epoch in range(EPOCHS):
 # In[ ]:
 
 
-model.save_pretrained('top_class_model')
-print(f'saved to top_class_model/')
+filename = f'top_class_model/{datetime.now().isoformat().replace(".", "_").replace(":", "-")}'
+model.save_pretrained(filename)
+print(f'saved to {filename}')
 
 
 # In[ ]:
